@@ -2,6 +2,8 @@ package org.vfeditor;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.resource.ImageDescriptor;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -13,6 +15,9 @@ public class Activator extends AbstractUIPlugin {
 
 	// The shared instance
 	private static Activator plugin;
+	
+	//The image registry where graphical resources are mapped to their names.
+	private ImageRegistry registry = new ImageRegistry();
 	
 	/**
 	 * The constructor
@@ -27,6 +32,8 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		
+		//add images/icons to image registry
 	}
 
 	/*
